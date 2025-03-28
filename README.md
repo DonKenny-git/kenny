@@ -29,6 +29,23 @@ git clone https://github.com/DonKenny-git/kenny.git
 4. Configure your database connection in `connection.php`
 5. Access the website through your web server
 
+## Deployment on InfinityFree (Free PHP Hosting)
+
+1. Create an account on [InfinityFree](https://infinityfree.com/)
+2. Choose a free subdomain or connect your own domain
+3. From the control panel, go to the File Manager
+4. Upload and extract the project files to the public_html directory
+5. Go to MySQL/Database section and create a new database
+6. Import the bsit.sql file using phpMyAdmin
+7. Update connection.php with your InfinityFree database credentials:
+   ```php
+   $host = "sql.infinityfree.com";
+   $user = "epiz_username"; // Your InfinityFree database username
+   $password = "your_password"; // Your database password
+   $db = "epiz_database_name"; // Your database name
+   ```
+8. Your site should now be accessible at your chosen subdomain (e.g., yoursite.infinityfree.net)
+
 ## Hosting Notes
 
 This is a PHP application and cannot be directly hosted on GitHub Pages, which only supports static websites (HTML, CSS, JavaScript). To properly host this application, consider these options:
