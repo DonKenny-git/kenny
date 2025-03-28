@@ -1,0 +1,25 @@
+# Database files
+*.sql
+*.sqlite
+
+# Environment files
+.env
+.env.*
+
+# IDE files
+.vscode/
+.idea/
+
+# Uploaded files
+uploads/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log
+
+# System files
+.DS_Store
+Thumbs.db 

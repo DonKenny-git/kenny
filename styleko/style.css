@@ -1,0 +1,552 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    /* Add a bit of padding to separate the container from the edges of the viewport */
+    padding: 10px;
+}
+ /* The sidebar menu */
+ .sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #3B3131; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar .side-header{
+        margin-left: 30px;
+        margin-bottom: 8px;
+        color: #fff;
+    }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    background-color: #584e46;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 2px;
+    font-size: 34px;
+    margin-left: 50px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    color: #fff;
+    background-color:#584e46;
+  }
+  
+  .openbtn:hover {
+    color: #ECDAC9;
+  }
+.sidebar {
+    height: 100%;
+    width: 250px; /* Set an initial width */
+    position: fixed;
+    z-index: 1;
+    top: 60px; /* Adjusted from 0 to 60px to accommodate the header */
+    bottom: 0px;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    padding-top: 20px; /* Adjusted from 60px to 20px */
+    transition: 0.5s;
+}
+
+/* Style page content - push the page content to the right when you open the side navigation */
+#main {
+    width: 100px;
+    transition: margin-left 0.5s; /* If you want a transition effect */
+    padding: 50px;
+    margin-right: 260px;
+    position: fixed;
+    top: 30px;
+    right: 0; /* Fixed position on the right */
+    width: calc(100% - 240px); /* Adjusted to account for the sidebar width */
+    
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+    #main {
+        left: 0; /* Adjusted to start from the left edge on smaller screens */
+        width: 100%; /* Take up the full width on smaller screens */
+        right: auto; /* Reset right on smaller screens */
+    }
+}
+
+.content {
+    padding: 20px;
+    width: 100%;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+
+
+/* ... (your existing styles for navigation, dropdowns, and other elements) ... */
+
+nav a {
+    text-decoration: none;
+    color: #FFE22E;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease;
+    top: 50px;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #FFE22E;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Add your styling here */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+   
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  /* Footer Styles */
+  .bottom {
+  background-color: #333; 
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  position: relative;
+  
+  }
+  .bottom p{
+  color: rgb(255, 255, 255);
+  }
+  .media {
+  padding: 40px;
+  transition: 0.2s linear;
+  }
+  .media:hover {
+  transform: translateY(-10px);
+       }   
+       
+  /* header style */
+.title {
+    width:100%;
+    height: 60px;
+    background-color: #000000; /* Set background color to black */
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    overflow: hidden;
+  }
+  
+  /* Animated background */
+  .title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: animateBackground 4s linear infinite;
+  }
+  
+  /* Animation keyframes */
+  @keyframes animateBackground {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  /* Logo style */
+.logo {
+    /* Add styles for your logo image, adjust as needed */
+    max-width: 190px; /* Adjust the max width of your logo */
+    height: 60px; /* Maintain aspect ratio */
+    margin-right: 1300px; /* Float the logo to the right */
+  }
+  
+  
+  
+  /* Signup form */
+  .login-form {
+      width: 300px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      text-align: center;
+      margin-top: 100px;
+      margin-left: 480px;
+      margin-right: 0;
+     
+  }
+  
+  /* Styling for all form elements */
+  .login-form * {
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      outline: none;
+      border: none;      
+  }
+  
+  /* Form heading */
+  .login-form h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    
+  }
+  
+  /* Input fields */
+  .login-form input {
+      height: 40px;
+      width: 90%;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      padding: 0 10px;
+      margin-top: 10px;
+      color: #ffffff;
+      box-sizing: border-box;
+      text-align: center;
+  }
+  
+  /* Placeholder text */
+  .login-form ::placeholder {
+      color: #e5e5e5;
+  }
+  
+  /* Submit button */
+  .login-form .button {
+      margin-top: 10px;
+      width: 70%;
+      background-color: #FFE22E;
+      color: #000;
+      padding: 10px 0;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the button */
+  .login-form .button:hover {
+      background-color: #FFD700;
+  }
+  
+  /* New styles for the toggle button */
+  .login-form .toggle-password-button {
+      position: relative;
+      right: 10px;
+      top: 2px;
+      height: 30px;
+      width: 30px;
+      background-color: rgba(0, 0, 0, 0);
+      color: #fff;
+      padding: 0;
+      font-size: 12px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the toggle button */
+  .login-form .toggle-password-button:hover {
+      background-color: none;
+  }
+  
+  /* Container for password input and toggle button using relative positioning */
+  .login-form .password-container {
+      position: relative;
+      width: 100%;
+      margin-top: 10px;
+  }
+  
+  /* Password input */
+  .login-form #password {
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      padding: 0 10px 0 10px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      color: #ffffff;
+      box-sizing: border-box;
+      margin-right: -30px;
+  }
+  
+  /* Link style */
+  .login-form p {
+      color: #fff;
+      margin-top: 20px;
+  }
+  
+  .login-form a {
+      color: #FFE22E;
+      text-decoration: underline;
+      cursor: pointer;
+  }
+  
+  /* signup form */
+  .signup-form {
+      width: 250px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      padding: 15px; /* Adjusted padding */
+      text-align: center;
+      margin-top: 100px;
+      margin-left: 510px;
+      margin-right: 0;
+  }
+  
+  /* Styling for all form elements */
+  .signup-form * {
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      outline: none;
+      border: none;
+  }
+  
+  /* Form heading */
+  .signup-form h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px; /* Adjusted margin */
+  }
+  
+  /* Input fields */
+  .signup-form input {
+      height: 30px; /* Adjusted height */
+      width: 90%;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      padding: 0 10px;
+      margin-top: 10px;
+      color: #ffffff;
+      box-sizing: border-box;
+      text-align: center;
+  }
+  
+  /* Placeholder text */
+  .signup-form ::placeholder {
+      color: #e5e5e5;
+  }
+  
+  /* Submit button */
+  .signup-form .button {
+      margin-top: 10px;
+      width: 70%;
+      background-color: #FFE22E;
+      color: #000;
+      padding: 10px 0;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the button */
+  .signup-form .button:hover {
+      background-color: #FFD700;
+  }
+  
+  /* New styles for the toggle button */
+  .signup-form .toggle-password-button {
+      position: relative;
+      right: 10px;
+      top: 2px;
+      height: 28px;
+      width: 28px;
+      background-color: rgba(0, 0, 0, 0);
+      color: #fff;
+      padding: 0;
+      font-size: 12px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the toggle button */
+  .signup-form .toggle-password-button:hover {
+      background-color: none;
+  }
+  
+  /* Container for password input and toggle button using relative positioning */
+  .signup-form .password-container {
+      position: relative;
+      width: 100%;
+      margin-top: 10px;
+  }
+  
+  /* Password input */
+  .signup-form #password {
+      height: 30px; /* Adjusted height */
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      padding: 0 10px 0 10px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      color: #ffffff;
+      box-sizing: border-box;
+      margin-right: -30px;
+  }
+  
+  /* Link style */
+  .signup-form p {
+      color: #fff;
+      margin-top: 20px;
+  }
+  
+  .signup-form a {
+      color: #FFE22E;
+      text-decoration: underline;
+      cursor: pointer;
+  }
+  
+  
+
+  
+              .about_container {
+                max-width: 800px;
+                margin: 150px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+            h1 {
+                color: #FF4500;
+                text-align: center;
+           font-size: 50px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.5;
+                text-align: justify;
+            }
+            .interesting-facts {
+                margin-top: 30px;
+                padding: 20px;
+                background-color: #FFE22E; /* Yellow background color for facts */
+                border-radius: 10px;
+            }
+            .fact {
+                font-weight: bold;
+                color: #FF4500; /* Orange color for facts */
+            }
+            .bounce {
+                animation: bounce 1s infinite alternate;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes fadeInText {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            @keyframes bounce {
+                from {
+                    transform: translateY(0);
+                }
+                to {
+                    transform: translateY(-10px);
+                }
+            }
+  
+            
+
+          
+         
+         
