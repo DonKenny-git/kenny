@@ -29,6 +29,20 @@ git clone https://github.com/DonKenny-git/kenny.git
 4. Configure your database connection in `connection.php`
 5. Access the website through your web server
 
+## Hosting Notes
+
+This is a PHP application and cannot be directly hosted on GitHub Pages, which only supports static websites (HTML, CSS, JavaScript). To properly host this application, consider these options:
+
+1. **Local Development**: Use XAMPP, WAMP, or MAMP to run the site locally
+2. **Web Hosting Services**: Use a PHP-compatible web hosting service like:
+   - Hostinger
+   - InfinityFree
+   - 000webhost
+   - HelioHost
+   - Heroku (with PHP buildpack)
+
+3. **Traditional Web Hosting**: Any hosting provider that supports PHP and MySQL
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details. 
